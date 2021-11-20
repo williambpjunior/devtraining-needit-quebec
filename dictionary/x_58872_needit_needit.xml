@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="rh" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos Humanos" sequence="0" value="rh"/>
+                <element inactive_on_update="false" label="Instalações" sequence="1" value="instalacoes"/>
+                <element inactive_on_update="false" label="Jurídico" sequence="2" value="juridico"/>
+                <element inactive_on_update="false" label="Financeiro" sequence="3" value="financeiro"/>
+                <element inactive_on_update="false" label="Tecnologia" sequence="4" value="ti"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="rh1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Recursos Humanos 1" sequence="0" value="rh1"/>
+                <element inactive_on_update="false" label="Recursos Humanos 2" sequence="1" value="rh2"/>
+                <element inactive_on_update="false" label="Instalações 1" sequence="2" value="instalacoes1"/>
+                <element inactive_on_update="false" label="Instalações 2" sequence="3" value="instalacoes2"/>
+                <element inactive_on_update="false" label="Jurídico 1" sequence="4" value="juridico1"/>
+                <element inactive_on_update="false" label="Jurídico 2" sequence="5" value="juridico2"/>
+                <element inactive_on_update="false" label="Financeiro 1" sequence="6" value="financeiro1"/>
+                <element inactive_on_update="false" label="Financeiro 2" sequence="7" value="financeiro2"/>
+                <element inactive_on_update="false" label="Tecnologia 1" sequence="8" value="ti1"/>
+                <element inactive_on_update="false" label="Tecnologia 2" sequence="9" value="ti2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
